@@ -1,0 +1,105 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Гостиница «Спорт» предлагает уют и комфорт{% endblock %}
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/icofont.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/spacing.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/leaflet.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/slick.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/menu.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/datepicker.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
+<link rel="icon" type="image/png" href="{{ asset('assets/images/favicon.png')}}"/>
+{% endblock %}
+{% block javascripts %}
+<script src="{{ asset('assets/js/jquery-3.5.1.min.js') }}"></script>
+<script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('assets/js/jquery.magnific-popup.min.js') }}"></script>
+<script src="{{ asset('assets/js/leaflet.min.js') }}"></script>
+<script src="{{ asset('assets/js/slick.min.js') }}"></script>
+<script src="{{ asset('assets/js/datepicker.min.js') }}"></script>
+<script src="{{ asset('assets/js/script.js') }}"></script>
+{% endblock %}
+{% block body %}
+<div class="page-wrapper">
+
+    <!-- Preloader -->
+    <div class="preloader"></div>
+
+    <!-- START Main Header -->
+    <header class="main-header">
+
+        <!-- Header-Upper -->
+        <div class="header-upper">
+            <div class="container clearfix">
+
+                <div class="header-inner d-lg-flex align-items-center">
+
+                    <div class="logo-outer d-flex align-items-center">
+                        <div class="logo"><a href="/"><img style="width:50px;height:50px;" src="{{ asset('assets/images/logo.png')}}" alt="Logo" /></a></div>
+                    </div>
+
+                    <div class="nav-outer clearfix ml-lg-auto mr-lg-auto">
+                        <!-- Main Menu -->
+                        <nav class="main-menu navbar-expand-lg">
+                            <div class="navbar-header clearfix">
+                                <!-- Toggle Button -->
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+
+                            <div class="navbar-collapse collapse clearfix">
+                                <ul class="navigation clearfix">
+                                    <li><a href="/">Главная</a></li>
+                                    <li><a href="/about">О нас</a></li>
+                                    <li><a href="/rooms">Номера</a></li>
+                                    <li class="current-menu-item"><a href="/articles">Статьи</a></li>
+                                    <li><a href="/gallery">Фотогалерея</a></li>
+                                    <li><a href="/contact">Контакты</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                        <!-- Main Menu END -->
+                    </div>
+
+                    <div class="menu-btn">
+                        <!-- <a href="contact.html" class="btn theme-btn">Contact Now <i class="icofont-arrow-right"></i></a> -->
+                        <a href="https://www.instagram.com/restaurant_olimp/"><img style="width:30px;height:30px;" src="{{ asset('assets/images/instagram-logo.png')}}" alt="instagram"> </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- END Header Upper -->
+    </header>
+
+
+    <!-- START Page Banner -->
+    <section class="service-section pt-100 rpt-85 pb-20 rpb-10">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="text-block">
+                        <h5 style="text-align: center;">Гостиница «Спорт» предлагает уют и комфорт</h5>
+
+                        <p>&nbsp;Самая интересная и наполненная комфортом и уютом <b>гостиница в Махачкале</b> – это <b>«Спорт», комплекс,</b> который привлекает гостей столицы Дагестана и удачным расположением в черте города, и отличным сервисом. <b>Рядом </b>с <b>гостиницей</b> – городские аллеи, по которым приятно прогуляться в свободное время, подышать чистым воздухом с морским ветерком.</p>
+                        <p>В шаговой доступности от <b>гостиничного комплекса «Спорт</b>» расположены магазины, кафе. Удобное расположение гостиницы практически в центральной части столицы позволяет легко дойти до делового центра, спортивных комплексов, не терять время на проезд до нужного административного здания. &nbsp;</p>
+                        <p>Основное назначение <b>гостиницы «Спорт</b>» – расселение спортсменов, зарубежных гостей и групп туристов из разных стран мира и регионов России. Несмотря на расположение в шумной части города, звуки городских улиц и разговоры в соседних номерах не побеспокоят постояльцев, так как стены выполнены из звуконепроницаемых материалов. Хорошо обученный и по национальным обычаям доброжелательный персонал всегда помогают решать возникающие задачи в плане обслуживания, или помогают в ориентировании по городу.</p>
+                        <p><b>Гостиничный комплекс «Спорт</b>» предлагает проводить конференции, деловые встречи, семинары, презентации и другие бизнес мероприятия. Для проведения конференций залы оснащены видео- и звуковым оборудованием, современной <span lang="EN-US">Wi</span>-<span lang="EN-US">Fi</span><span lang="EN-US"> </span>связью. Есть видео- оборудование, спутниковое телевидение, пункт обмена валюты. Для участников деловых мероприятий в местном ресторане организуются банкеты или фуршеты.</p>
+                        <p>Первоклассный ресторан к услугам гостей предлагает великолепное обслуживание, отличный набор блюд национальной и европейской кухни. Уникальная карта вин содержит ассортимент напитков местного производства, лучшие вина европейских стран. В холлах гостиницы расположены сувенирные мини бутики, где всегда можно приобрести парфюмерию первой необходимости и национальные сувениры. &nbsp;</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END Page Banner -->
+        <!-- Scroll Top Button -->
+        <button class="scroll-top scroll-to-target" data-target="html"><i class="icofont-arrow-up"></i></button>
+    </div>
+    {% endblock %}

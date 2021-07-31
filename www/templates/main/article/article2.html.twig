@@ -1,0 +1,108 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Отдых в Махачкале{% endblock %}
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/icofont.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/spacing.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/leaflet.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/slick.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/menu.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/datepicker.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
+<link rel="icon" type="image/png" href="{{ asset('assets/images/favicon.png')}}"/>
+{% endblock %}
+{% block javascripts %}
+<script src="{{ asset('assets/js/jquery-3.5.1.min.js') }}"></script>
+<script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('assets/js/jquery.magnific-popup.min.js') }}"></script>
+<script src="{{ asset('assets/js/leaflet.min.js') }}"></script>
+<script src="{{ asset('assets/js/slick.min.js') }}"></script>
+<script src="{{ asset('assets/js/datepicker.min.js') }}"></script>
+<script src="{{ asset('assets/js/script.js') }}"></script>
+{% endblock %}
+{% block body %}
+<div class="page-wrapper">
+
+    <!-- Preloader -->
+    <div class="preloader"></div>
+
+    <!-- START Main Header -->
+    <header class="main-header">
+
+        <!-- Header-Upper -->
+        <div class="header-upper">
+            <div class="container clearfix">
+
+                <div class="header-inner d-lg-flex align-items-center">
+
+                    <div class="logo-outer d-flex align-items-center">
+                        <div class="logo"><a href="/"><img style="width:50px;height:50px;" src="{{ asset('assets/images/logo.png')}}" alt="Logo" /></a></div>
+                    </div>
+
+                    <div class="nav-outer clearfix ml-lg-auto mr-lg-auto">
+                        <!-- Main Menu -->
+                        <nav class="main-menu navbar-expand-lg">
+                            <div class="navbar-header clearfix">
+                                <!-- Toggle Button -->
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+
+                            <div class="navbar-collapse collapse clearfix">
+                                <ul class="navigation clearfix">
+                                    <li><a href="/">Главная</a></li>
+                                    <li><a href="/about">О нас</a></li>
+                                    <li><a href="/rooms">Номера</a></li>
+                                    <li class="current-menu-item"><a href="/articles">Статьи</a></li>
+                                    <li><a href="/gallery">Фотогалерея</a></li>
+                                    <li><a href="/contact">Контакты</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                        <!-- Main Menu END -->
+                    </div>
+
+                    <div class="menu-btn">
+                        <!-- <a href="contact.html" class="btn theme-btn">Contact Now <i class="icofont-arrow-right"></i></a> -->
+                        <a href="https://www.instagram.com/restaurant_olimp/"><img style="width:30px;height:30px;" src="{{ asset('assets/images/instagram-logo.png')}}" alt="instagram"> </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- END Header Upper -->
+    </header>
+
+
+    <!-- START Page Banner -->
+    <section class="service-section pt-100 rpt-85 pb-20 rpb-10">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="text-block">
+                        <h5 style="text-align: center;">Отдых в Махачкале</h5>
+
+
+                        <p>&nbsp;Уникальное и удивительно интересное место в России, где тонко и корректно переплетены множество культур разных народностей – это <b>Махачкала, центр</b> <b>Дагестанской республики.</b> Это тот уголок России, который живёт своими самобытными традициями и обычаями, и приглашает познакомиться с ними всех жителей России.</p>
+                        <p>История Дагестана достаточно объёмная и уходящая корнями глубоко в пласты истории. Сегодня большой российский город постепенно превращается в крупный туристический и деловой центр страны, куда съезжаются туристы и бизнесмены со всего мира, и где есть множество лучших в <b>Дагестане гостиниц.</b> &nbsp;</p>
+                        <p><b>Отдых в Махачкале</b> оставляет только позитивные впечатления. Туристов здесь привлекает восхитительная красота окрестностей и ценность памятников культуры и архитектуры, подобных которым вряд ли отыщешь во всём мире. Сама Махачкала, центр солнечного Дагестана, приглашает на обзорные экскурсии по городу, где можно познакомиться с удивительной архитектурой Свято-Успенского кафедрального собора, Центральной Джума-мечети, множества тематических памятников и музеев, с которыми знакомят искусные экскурсоводы, свободно разговаривающие на разных языках мира.</p>
+                        <p>Для вечернего отдыха есть театры на любой вкус, дискотеки или спокойные музыкальные вечера в разных кафе и клубах. Есть возможность <b>активного отдыха</b> – в спортивных клубах или залах фитнеса и аэробики, где кроме направленных занятий предлагается любой спортивный инвентарь и площадки – волейбол, баскетбол, футбол, теннис.</p>
+                        <p>На территории города есть несколько прекрасно <b>оборудованных пляжей,</b> отдых на которых покажется настоящим раем даже по сравнению с заморскими странами, куда так тянет россиян. Конечно, неплохо побывать в разных странах мира, но как же хочется хорошо узнать все прекрасные уголки своей Родины. Вот и манит, зовёт солнечный Дагестан <b>морем Каспийским,</b> местами неизведанными.</p>
+                        <p>А узнать можно не только интересную и самобытную историю необыкновенной многонациональной<b> республики Дагестан</b>, но и то, что её центр, Махачкала – это великолепный, известный всему миру бальнеогрязевой курорт. Город и здравницы в его окрестностях привлекают желающих подлечиться в тёплом климате, с благоприятной геомагнитной обстановкой, с собственными минеральными источниками. А Махачкалинское солевое озеро и соседние Малое и Большое Турали не просто живописнейшие места Дагестана, но ещё и источники лечебной грязи, практически универсальной по лечебному воздействию на здоровье человека.</p>
+                        <p>Домой с отдыха в Махачкале все гости столицы везут эксклюзивные поделки народных мастеров, ювелирные изделия в национальном стиле, коньяк местного производства и даже шерстяные ковры ручной работы. Частичка Дагестана и Махачкалы навсегда останется в ваших сердцах.&nbsp;</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END Page Banner -->
+        <!-- Scroll Top Button -->
+        <button class="scroll-top scroll-to-target" data-target="html"><i class="icofont-arrow-up"></i></button>
+    </div>
+    {% endblock %}

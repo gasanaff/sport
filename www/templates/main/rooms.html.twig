@@ -1,0 +1,392 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Номера | Гостиница "Спорт"{% endblock %}
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/icofont.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/spacing.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/leaflet.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/slick.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/menu.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/datepicker.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/jquery.fancybox.min.css') }}">
+<link rel="icon" type="image/png" href="{{ asset('assets/images/favicon.png')}}"/>
+{% endblock %}
+{% block javascripts %}
+<script src="{{ asset('assets/js/jquery-3.5.1.min.js') }}"></script>
+<script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('assets/js/jquery.magnific-popup.min.js') }}"></script>
+<script src="{{ asset('assets/js/leaflet.min.js') }}"></script>
+<script src="{{ asset('assets/js/slick.min.js') }}"></script>
+<script src="{{ asset('assets/js/datepicker.min.js') }}"></script>
+<script src="{{ asset('assets/js/jquery.fancybox.min.js') }}"></script>
+<script src="{{ asset('assets/js/script.js') }}"></script>
+{% endblock %}
+{% block body %}
+<div class="page-wrapper">
+    <div class="preloader"></div>
+    <header class="main-header">
+        <div class="header-upper">
+            <div class="container clearfix">
+
+                <div class="header-inner d-lg-flex align-items-center">
+
+                    <div class="logo-outer d-flex align-items-center">
+                        <div class="logo"><a href="/"><img style="width:50px;height:50px;" src="assets/images/logo.png" alt="Logo" /></a></div>
+                    </div>
+
+                    <div class="nav-outer clearfix ml-lg-auto mr-lg-auto">
+                        <nav class="main-menu navbar-expand-lg">
+                            <div class="navbar-header clearfix">
+                                <!-- Toggle Button -->
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+
+                            <div class="navbar-collapse collapse clearfix">
+                                <ul class="navigation clearfix">
+                                    <li><a href="/">Главная</a></li>
+                                    <li><a href="about">О нас</a></li>
+                                    <li class="current-menu-item"><a href="rooms">Номера</a></li>
+                                    <li><a href="articles">Статьи</a></li>
+                                    <li><a href="gallery">Фотогалерея</a></li>
+                                    <li><a href="contact">Контакты</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+
+                    <div class="menu-btn">
+                        <a href="https://www.instagram.com/restaurant_olimp/"><img style="width:30px;height:30px;" src="assets/images/instagram-logo.png" alt="instagram"> </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="service-section pt-100 rpt-85 pb-20 rpb-10">
+        <div class="container">
+
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="text-block">
+                        <h5 style="text-align:center">Одноместный однокомнатный номер.</h5>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="row">
+
+                                    <div class="col-sm"></div>
+                                    <div class="col-sm">
+                                        <div class="pic">
+                                          <a href="assets/images/hotel/IMG_7320.jpg" data-fancybox="images" data-caption="Одноместный однокомнатный номер с 1 кроватью на два человека. В номере есть большая душевая, туалет, телевизор, холодильник,чайник, чашки и стаканы. Площадь от 12 до 15 кв. м.">
+                                              <img class="room" src="assets/images/hotel/thumbnail/IMG_7320.jpg">
+                                          </a>
+                                      </div>
+                                  </div>
+
+                                  <div class="col-sm">
+                                    <div class="pic">
+                                        <a href="assets/images/hotel/IMG_7329.jpg" data-fancybox="images" data-caption="Одноместный однокомнатный номер с 1 кроватью на два человека. В номере есть большая душевая, туалет, телевизор, холодильник,чайник, чашки и стаканы. Площадь от 12 до 15 кв. м.">
+                                          <img class="room" src="assets/images/hotel/thumbnail/IMG_7329.jpg">
+                                      </a>
+                                  </div>
+                              </div>
+                              <div class="col-sm"></div>
+                          </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="room-desc">Одноместный однокомнатный номер с 1 кроватью на два человека. В номере есть большая душевая, туалет, телевизор, холодильник,чайник, чашки и стаканы. Площадь от 12 до 15 кв. м.</div>
+                    </div>
+                    <div class="col-12">
+                        <button class="room-book" id="1">Забронировать</button>
+                    </div>
+                    <div class="col-12">
+                        <hr>
+                    </div>
+                </div>
+
+
+
+                <h5 style="text-align:center">Двухместный однокомнатный номер.</h5>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row">
+                          <div class="col-sm">
+<!--                         <div class="pic">
+                          <a href="assets/images/hotel/IMG_7080.jpg" data-fancybox="images" data-caption="Двухместный однокомнатный номер с 2 кроватями. В номере есть душевая кабина, туалет, телевизор, холодильник, кондиционер, чайник, чашки и стаканы.">
+                              <img class="room" src="assets/images/hotel/thumbnail/IMG_7080.jpg">
+                          </a>
+                      </div> -->
+                  </div>
+
+
+
+                  <div class="col-sm">
+                    <div class="pic">
+                        <a href="assets/images/hotel/IMG_7296.jpg" data-fancybox="images" data-caption="Двухместный однокомнатный номер с 2 кроватями. В номере есть душевая кабина, туалет, телевизор, холодильник, кондиционер, чайник, чашки и стаканы.">
+                          <img class="room" src="assets/images/hotel/thumbnail/IMG_7296.jpg">
+                      </a>
+                  </div>
+              </div>
+
+
+              <div class="col-sm">
+                <div class="pic">
+                  <a href="assets/images/hotel/IMG_7333.jpg" data-fancybox="images" data-caption="Двухместный однокомнатный номер с 2 кроватями. В номере есть душевая кабина, туалет, телевизор, холодильник, кондиционер, чайник, чашки и стаканы.">
+                      <img class="room" src="assets/images/hotel/thumbnail/IMG_7333.jpg">
+                  </a>
+              </div>
+          </div>
+
+          <div class="col-sm">
+<!--                     <div class="pic">
+                        <a href="assets/images/hotel/IMG_20210619_135823.jpg" data-fancybox="images" data-caption="Одноместный однокомнатный номер с 1 кроватью на два человека. В номере есть большая душевая, туалет, телевизор, холодильник,чайник, чашки и стаканы. Площадь от 12 до 15 кв. м.">
+                          <img class="room" src="assets/images/hotel/thumbnail/IMG_20210619_135823.jpg">
+                      </a>
+                  </div> -->
+              </div>
+
+          </div>
+      </div>
+      <div class="col-12">
+        <div class="room-desc">Двухместный однокомнатный номер с 2 кроватями. В номере есть душевая кабина, туалет, телевизор, холодильник, кондиционер, чайник, чашки и стаканы.</div>
+    </div>
+    <div class="col-12">
+        <button class="room-book" id="2">Забронировать</button>
+    </div>
+    <div class="col-12">
+        <hr>
+    </div>
+</div>
+
+
+<h5 style="text-align:center">Двухкомнатный люкс.</h5>
+<div class="row">
+    <div class="col-12">
+        <div class="row">
+            <div class="col-sm">
+                <div class="pic">
+                  <a href="assets/images/hotel/IMG_20210619_143016.jpg" data-fancybox="images" data-caption="Двухкомнатный люкс. В спальне большая кровать. В зале диван. Ванная, туалет, телевизор, кондиционер, два санузла. Чайник, чашки, посуда. Wi-Fi на этаже. Площадь 25-30 кв. м.">
+                      <img class="room" src="assets/images/hotel/thumbnail/IMG_20210619_143016.jpg">
+                  </a>
+              </div>
+          </div>
+
+          <div class="col-sm">
+            <div class="pic">
+                <a href="assets/images/hotel/IMG_20210619_141516.jpg" data-fancybox="images" data-caption="Двухкомнатный люкс. В спальне большая кровать. В зале диван. Ванная, туалет, телевизор, кондиционер, два санузла. Чайник, чашки, посуда. Wi-Fi на этаже. Площадь 25-30 кв. м.">
+                  <img class="room" src="assets/images/hotel/thumbnail/IMG_20210619_141516.jpg">
+              </a>
+          </div>
+      </div>
+
+      <div class="col-sm">
+        <div class="pic">
+            <a href="assets/images/hotel/IMG_7169.jpg" data-fancybox="images" data-caption="Двухкомнатный люкс. В спальне большая кровать. В зале диван. Ванная, туалет, телевизор, кондиционер, два санузла. Чайник, чашки, посуда. Wi-Fi на этаже. Площадь 25-30 кв. м.">
+              <img class="room" src="assets/images/hotel/thumbnail/IMG_7169.jpg">
+          </a>
+      </div>
+  </div>
+
+  <div class="col-sm">
+    <div class="pic">
+        <a href="assets/images/hotel/IMG_7180.jpg" data-fancybox="images" data-caption="Двухкомнатный люкс. В спальне большая кровать. В зале диван. Ванная, туалет, телевизор, кондиционер, два санузла. Чайник, чашки, посуда. Wi-Fi на этаже. Площадь 25-30 кв. м.">
+          <img class="room" src="assets/images/hotel/thumbnail/IMG_7180.jpg">
+      </a>
+  </div>
+</div>
+</div>
+
+<div class="row">
+    <div class="col-sm">
+        <br>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm">
+    </div>
+
+    <div class="col-sm">
+        <div class="pic">
+            <a href="assets/images/hotel/IMG_7352.jpg" data-fancybox="images" data-caption="Двухкомнатный люкс. В спальне большая кровать. В зале диван. Ванная, туалет, телевизор, кондиционер, два санузла. Чайник, чашки, посуда. Wi-Fi на этаже. Площадь 25-30 кв. м.">
+              <img class="room" src="assets/images/hotel/thumbnail/IMG_7352.jpg">
+          </a>
+      </div>
+  </div>
+
+  <div class="col-sm">
+    <div class="pic">
+        <a href="assets/images/hotel/IMG_7353.jpg" data-fancybox="images" data-caption="АДвухкомнатный люкс. В спальне большая кровать. В зале диван. Ванная, туалет, телевизор, кондиционер, два санузла. Чайник, чашки, посуда. Wi-Fi на этаже. Площадь 25-30 кв. м.">
+          <img class="room" src="assets/images/hotel/thumbnail/IMG_7353.jpg">
+      </a>
+  </div>
+</div>
+
+<div class="col-sm">
+</div>
+</div>
+
+
+</div>
+<div class="col-12">
+    <div class="room-desc">Двухкомнатный люкс. В спальне большая кровать. В зале диван. Ванная, туалет, телевизор, кондиционер, два санузла. Чайник, чашки, посуда. Wi-Fi на этаже. Площадь 25-30 кв. м.</div>
+</div>
+<div class="col-12">
+    <button class="room-book" id="3">Забронировать</button>
+</div>
+<div class="col-12">
+    <hr>
+</div>
+</div>
+
+
+<h5 style="text-align:center">Апартаменты.</h5>
+<div class="row">
+    <div class="col-12">
+        <div class="row">
+            <div class="col-sm">
+                <div class="pic">
+                  <a href="assets/images/hotel/IMG_7288.jpg" data-fancybox="images" data-caption="Апартаменты. Большая ванная комнат, два санузла, кондиционер, чайник, чашки, посуда, два телевизора. Wi-Fi на этаже. Площадь 50 кв. м.">
+                      <img class="room" src="assets/images/hotel/thumbnail/IMG_7288.jpg">
+                  </a>
+              </div>
+          </div>
+
+          <div class="col-sm">
+            <div class="pic">
+                <a href="assets/images/hotel/IMG_7291.jpg" data-fancybox="images" data-caption="Апартаменты. Большая ванная комнат, два санузла, кондиционер, чайник, чашки, посуда, два телевизора. Wi-Fi на этаже. Площадь 50 кв. м.">
+                  <img class="room" src="assets/images/hotel/thumbnail/IMG_7291.jpg">
+              </a>
+          </div>
+      </div>
+
+      <div class="col-sm">
+        <div class="pic">
+            <a href="assets/images/hotel/IMG_7283.jpg" data-fancybox="images" data-caption="Апартаменты. Большая ванная комнат, два санузла, кондиционер, чайник, чашки, посуда, два телевизора. Wi-Fi на этаже. Площадь 50 кв. м.">
+              <img class="room" src="assets/images/hotel/thumbnail/IMG_7283.jpg">
+          </a>
+      </div>
+  </div>
+
+  <div class="col-sm">
+    <div class="pic">
+        <a href="assets/images/hotel/IMG_7285.jpg" data-fancybox="images" data-caption="Апартаменты. Большая ванная комнат, два санузла, кондиционер, чайник, чашки, посуда, два телевизора. Wi-Fi на этаже. Площадь 50 кв. м.">
+          <img class="room" src="assets/images/hotel/thumbnail/IMG_7285.jpg">
+      </a>
+  </div>
+</div>
+</div>
+<div class="row">
+    <div class="col-sm"><br></div>
+</div>
+<div class="row">
+    <div class="col-sm">
+        <div class="pic">
+          <a href="assets/images/hotel/IMG_7185.jpg" data-fancybox="images" data-caption="Апартаменты. Большая ванная комнат, два санузла, кондиционер, чайник, чашки, посуда, два телевизора. Wi-Fi на этаже. Площадь 50 кв. м.">
+              <img class="room" src="assets/images/hotel/thumbnail/IMG_7185.jpg">
+          </a>
+      </div>
+  </div>
+
+  <div class="col-sm">
+    <div class="pic">
+        <a href="assets/images/hotel/IMG_7256.jpg" data-fancybox="images" data-caption="Апартаменты. Большая ванная комнат, два санузла, кондиционер, чайник, чашки, посуда, два телевизора. Wi-Fi на этаже. Площадь 50 кв. м.">
+          <img class="room" src="assets/images/hotel/thumbnail/IMG_7256.jpg">
+      </a>
+  </div>
+</div>
+
+<div class="col-sm">
+    <div class="pic">
+        <a href="assets/images/hotel/IMG_7252.jpg" data-fancybox="images" data-caption="Апартаменты. Большая ванная комнат, два санузла, кондиционер, чайник, чашки, посуда, два телевизора. Wi-Fi на этаже. Площадь 50 кв. м.">
+          <img class="room" src="assets/images/hotel/thumbnail/IMG_7252.jpg">
+      </a>
+  </div>
+</div>
+
+<div class="col-sm">
+    <div class="pic">
+        <a href="assets/images/hotel/IMG_7250_2.jpg" data-fancybox="images" data-caption="Апартаменты. Большая ванная комнат, два санузла, кондиционер, чайник, чашки, посуда, два телевизора. Wi-Fi на этаже. Площадь 50 кв. м.">
+          <img class="room" src="assets/images/hotel/thumbnail/IMG_7250_2.jpg">
+      </a>
+  </div>
+</div>
+</div>
+
+<div class="row">
+    <div class="col-sm"><br></div>
+</div>
+
+<div class="row">
+    <div class="col-sm">
+        <div class="pic">
+          <a href="assets/images/hotel/IMG_7338.jpg" data-fancybox="images" data-caption="Апартаменты. Большая ванная комнат, два санузла, кондиционер, чайник, чашки, посуда, два телевизора. Wi-Fi на этаже. Площадь 50 кв. м.">
+              <img class="room" src="assets/images/hotel/thumbnail/IMG_7338.jpg">
+          </a>
+      </div>
+  </div>
+
+  <div class="col-sm">
+    <div class="pic">
+        <a href="assets/images/hotel/IMG_7345.jpg" data-fancybox="images" data-caption="Апартаменты. Большая ванная комнат, два санузла, кондиционер, чайник, чашки, посуда, два телевизора. Wi-Fi на этаже. Площадь 50 кв. м.">
+          <img class="room" src="assets/images/hotel/thumbnail/IMG_7345.jpg">
+      </a>
+  </div>
+</div>
+
+<div class="col-sm">
+    <div class="pic">
+        <a href="assets/images/hotel/IMG_7343.jpg" data-fancybox="images" data-caption="Апартаменты. Большая ванная комнат, два санузла, кондиционер, чайник, чашки, посуда, два телевизора. Wi-Fi на этаже. Площадь 50 кв. м.">
+          <img class="room" src="assets/images/hotel/thumbnail/IMG_7343.jpg">
+      </a>
+  </div>
+</div>
+
+<div class="col-sm">
+    <div class="pic">
+        <a href="assets/images/hotel/IMG_7348.jpg" data-fancybox="images" data-caption="Апартаменты. Большая ванная комнат, два санузла, кондиционер, чайник, чашки, посуда, два телевизора. Wi-Fi на этаже. Площадь 50 кв. м.">
+          <img class="room" src="assets/images/hotel/thumbnail/IMG_7348.jpg">
+      </a>
+  </div>
+</div>
+</div>
+
+
+
+</div>
+<div class="col-12">
+    <div class="room-desc">Апартаменты. Большая ванная комнат, два санузла, кондиционер, чайник, чашки, посуда, два телевизора. Wi-Fi на этаже. Площадь 50 кв. м.</div>
+</div>
+<div class="col-12">
+    <button class="room-book" id="4">Забронировать</button>
+</div>
+<div class="col-12">
+    <hr>
+</div>
+</div>
+
+
+</div>
+</div>
+</div>
+</div>
+</section>
+<button class="scroll-top scroll-to-target" data-target="html"><i class="icofont-arrow-up"></i></button>
+
+<script type="text/javascript">
+    (function ($) {
+        $("button.room-book").click(function(){
+            console.log($(this).attr("id"));
+            window.location.replace("/?bookingroom="+$(this).attr("id"));
+        });
+    })(window.jQuery);
+</script>
+</div>
+{% endblock %}

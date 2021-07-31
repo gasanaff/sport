@@ -1,0 +1,264 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Главная | Гостиница "Спорт"{% endblock %}
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/icofont.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/spacing.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/leaflet.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/slick.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/menu.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/datepicker.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/style.css?v=1') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
+<link rel="icon" type="image/png" href="{{ asset('assets/images/favicon.png')}}"/>
+{% endblock %}
+{% block javascripts %}
+<script src="{{ asset('assets/js/jquery-3.5.1.min.js') }}"></script>
+<script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('assets/js/jquery.magnific-popup.min.js') }}"></script>
+<script src="{{ asset('assets/js/leaflet.min.js') }}"></script>
+<script src="{{ asset('assets/js/slick.min.js') }}"></script>
+<script src="{{ asset('assets/js/datepicker.min.js') }}"></script>
+<script src="{{ asset('assets/js/script.js') }}"></script>
+<script src="{{ asset('assets/js/index.js') }}"></script>
+{% endblock %}
+{% block body %}
+<div class="page-wrapper">
+
+    <!-- Preloader -->
+    <div class="preloader"></div>
+
+    <!-- START Main Header -->
+    <header class="main-header">
+
+        <!-- Header-Upper -->
+        <div class="header-upper">
+            <div class="container clearfix">
+
+                <div class="header-inner d-lg-flex align-items-center">
+
+                    <div class="logo-outer d-flex align-items-center">
+                        <div class="logo"><a href="/"><img style="width:50px;height:50px;" src="assets/images/logo.png" alt="Logo" /></a></div>
+                    </div>
+
+                    <div class="nav-outer clearfix ml-lg-auto mr-lg-auto">
+                        <!-- Main Menu -->
+                        <nav class="main-menu navbar-expand-lg">
+                            <div class="navbar-header clearfix">
+                                <!-- Toggle Button -->
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+
+                            <div class="navbar-collapse collapse clearfix">
+                                <ul class="navigation clearfix">
+                                    <li class="current-menu-item"><a href="/">Главная</a></li>
+                                    <li><a href="about">О нас</a></li>
+                                    <li><a href="rooms">Номера</a></li>
+                                    <li><a href="articles">Статьи</a></li>
+                                    <li><a href="gallery">Фотогалерея</a></li>
+                                    <li><a href="contact">Контакты</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                        <!-- Main Menu END -->
+                    </div>
+
+                    <div class="menu-btn">
+                        <!-- <a href="contact.html" class="btn theme-btn">Contact Now <i class="icofont-arrow-right"></i></a> -->
+                        <a href="https://www.instagram.com/restaurant_olimp/"><img style="width:25px;height:25px;margin:5px;" src="assets/images/instagram-logo.png" alt="instagram"> </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- END Header Upper -->
+    </header>
+    <!-- END Main Header -->
+    <!-- START Service Section -->
+    <section class="service-section pt-100 rpt-85 pb-20 rpb-10">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="header-img">
+                        <img src="assets/images/header.jpg"alt=""/>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="text-block">
+                        <!-- <img style="width:100%;" src="assets/images/book.png"alt=""/> -->
+                    </div>
+                    <div class="text-block">
+                        <div class="book-block">
+                            <button class="accordion">Бронирование</button>
+                            <div class="panel">
+                                <form id="booking" class="bookform" method="POST">
+                                  <div class="form-outline mb-4">
+                                    <label for="name">Ваше имя</label>
+                                    <input id="name" class="form-control" name="name" type="text" autocomplete="off"/>
+                                    <span  id="name-incorrect" class="incorrect">Пожалуйства, введите корректные данные</span>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <label for="daterange">Заезд - отъезд</label>
+                                    <input id="daterange" readonly class="datepicker-range datepicker-here form-control" name="daterange" type="text" data-range="true" data-multiple-dates-separator=" - "/>
+                                    <span  id="daterange-incorrect" class="incorrect">Пожалуйства, введите корректные данные</span>
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="phonenumber">Номер телефона</label>
+                                    <input type="number" id="phonenumber" class="form-control" name="phonenumber" />
+                                    <span  id="phonenumber-incorrect" class="incorrect">Пожалуйства, введите корректные данные</span>
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <label for="rooms">Выберите номер</label>
+                                    <select class="form-control" name="rooms" id="rooms">
+                                        <option value="0" selected disabled></option>
+                                        <option value="1">1 ком. одноместный</option>
+                                        <option value="2" >1 ком. двухместный</option>
+                                        <option value="3">2 ком. люкс</option>
+                                        <option value="4">Апартаменты</option>
+                                    </select>
+                                    <span  id="rooms-incorrect" class="incorrect">Пожалуйства, введите корректные данные</span>
+                                </div>
+                                <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response" />
+                                <input type="hidden" name="token" value="{{ csrf_token('csrf_token') }}"/>
+
+                                <!-- Submit button -->
+                                <button type="button" id="book-btn" class="book-btn" onclick="sendBookingData()">Забронировать</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="text-block">
+                    <p style="text-indent: 40px;">
+                        <b>Гостиница «Спорт»</b> находится в центре г. Махачкала, на перекрестке проспекта И. Шамиля и проспекта М. Ярагского (проспект Шамиля, 37/100). Удобное расположение гостиницы между горой Тарки-Тау и Каспийским морем, позволяет туристам за 15 минут добраться до городского пляжа, а также быстро попасть в любой конец города.
+                    </p>
+                    <p style="text-indent: 40px;">
+                        <b>Гостиница «Спорт» </b> 4-этажный комплекс, который предлагает полный спектр услуг для своих гостей. Wi-Fi доступ в Интернет предоставляется во всех номерах и общественных  зонах гостиницы. На территории гостиницы расположены:
+                        <ul>
+                            <li> <img src="assets/images/listitem.png" alt="-" style="width:15px; height:15px;"> ресторан «Олимп», с приятной и уютной атмосферой, живой музыкой, вы почувствуйте  невероятный колорит кавказской кухни, а также европейские блюда на самый изысканный вкус.</li>
+                            <li><img src="assets/images/listitem.png" alt="-" style="width:15px; height:15px;"> фирменный магазин «коньячный дом Дербент», куда осуществляются прямые поставки от производителя — Дербентского коньячного комбината.</li>
+                            <li><img src="assets/images/listitem.png" alt="-" style="width:15px; height:15px;"> русская баня.</li>
+                            <li><img src="assets/images/listitem.png" alt="-" style="width:15px; height:15px;"> массажный кабинет.</li>
+                            <li><img src="assets/images/listitem.png" alt="-" style="width:15px; height:15px;"> кафе, бар.</li>
+                            <li><img src="assets/images/listitem.png" alt="-" style="width:15px; height:15px;"> имеется охраняемая бесплатная автостоянка.</li>
+
+                        </ul>
+                        Рядом с гостиницей расположены стадион «Труд» имени двукратной олимпийской чемпионки Е. Исенбаевой, супермаркет «Зеленое Яблоко», целебный источник «Тарнаир», ледовый каток, кинотеатр «Россия». В шаговой доступности салоны красоты, рынок, пункт обмена валюты, банкоматы,  музей «Исторический парк России», действующая центральная Джума-мечеть — архитектурный памятник Дагестана
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+             <div class="col-12">
+                <div class="text-block">
+                 <div class="special-offer">
+                     <div class="special-offer-header-block">
+                         <span class="special-offer-header-title">Акция!</span>
+                     </div>
+                     <p style="text-align: center;"><span class="special-offer-header-text">Скидка 10% при бронировании через </span> <a href="https://www.booking.com/hotel/ru/gostinitsa-sport-makhachkala.ru.html"><img style="height:32px;margin: auto;" src="assets/images/bookingcom_logo.png" alt=""></a></p>
+                     <!-- <p style="text-align: center;"> <a href="https://booking.com"><img src="assets/images/bookingcom_logo.png" alt=""></a> </p> -->
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
+</section>
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close_modal">&times;</span>
+    <p id="p-modal-content"></p>
+</div>
+
+</div>
+
+
+<button class="scroll-top scroll-to-target" data-target="html"><i class="icofont-arrow-up"></i></button>
+</div>
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active_acc");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+      } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+      } 
+  });
+  };
+
+  $("button.accordion").click(function(){
+    $("input#name").focus();
+})
+  $('.datepicker-range').datepicker({
+    language: 'ru',
+    autoClose: true,
+    minDate: new Date(),
+});
+  $('select.book').change(function () {
+    $(this).css('color', 'black');
+});
+  const queryString = window.location.search;
+  console.log(queryString);
+  const urlParams = new URLSearchParams(queryString);
+  const bookingroom = urlParams.get('bookingroom');
+  console.log(bookingroom);
+  if (bookingroom == 1) {
+    $( "button.accordion" ).trigger( "click" );
+    $( "select#rooms" ).val("1").change();
+    $("input#name").focus();
+} else if (bookingroom == 2) {
+    $( "button.accordion" ).trigger( "click" );
+    $( "select#rooms" ).val("2").change();
+    $("input#name").focus();
+} else if (bookingroom == 3) {
+    $( "button.accordion" ).trigger( "click" );
+    $( "select#rooms" ).val("3").change();
+    $("input#name").focus();
+} else if (bookingroom == 4) {
+    $( "button.accordion" ).trigger( "click" );
+    $( "select#rooms" ).val("4").change();
+    $("input#name").focus();
+}
+</script>
+<script src="https://www.google.com/recaptcha/api.js?render={{capatchaSiteKey}}"></script>
+<script>
+    grecaptcha.ready(function() {
+        grecaptcha.execute('{{capatchaSiteKey}}', {action: 'homepage'}).then(function(token) {
+            document.getElementById('g-recaptcha-response').value=token;
+        });
+    });
+</script>
+<script>
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("myBtn");
+    var span = document.getElementsByClassName("close_modal")[0];
+    span.onclick = function() {
+      modal.style.display = "none";
+      window.location.replace("/");
+  }
+
+  window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+        window.location.replace("/");
+    }
+}
+</script>
+{% endblock %}

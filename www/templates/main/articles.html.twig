@@ -1,0 +1,119 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Статьи | Гостиница "Спорт"{% endblock %}
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/icofont.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/spacing.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/leaflet.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/slick.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/menu.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/datepicker.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
+<link rel="icon" type="image/png" href="{{ asset('assets/images/favicon.png')}}"/>
+{% endblock %}
+{% block javascripts %}
+<script src="{{ asset('assets/js/jquery-3.5.1.min.js') }}"></script>
+<script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('assets/js/jquery.magnific-popup.min.js') }}"></script>
+<script src="{{ asset('assets/js/leaflet.min.js') }}"></script>
+<script src="{{ asset('assets/js/slick.min.js') }}"></script>
+<script src="{{ asset('assets/js/datepicker.min.js') }}"></script>
+<script src="{{ asset('assets/js/script.js') }}"></script>
+{% endblock %}
+{% block body %}
+<div class="page-wrapper">
+
+    <!-- Preloader -->
+    <div class="preloader"></div>
+
+    <!-- START Main Header -->
+    <header class="main-header">
+
+        <!-- Header-Upper -->
+        <div class="header-upper">
+            <div class="container clearfix">
+
+                <div class="header-inner d-lg-flex align-items-center">
+
+                    <div class="logo-outer d-flex align-items-center">
+                        <div class="logo"><a href="/"><img style="width:50px;height:50px;" src="assets/images/logo.png" alt="Logo" /></a></div>
+                    </div>
+
+                    <div class="nav-outer clearfix ml-lg-auto mr-lg-auto">
+                        <!-- Main Menu -->
+                        <nav class="main-menu navbar-expand-lg">
+                            <div class="navbar-header clearfix">
+                                <!-- Toggle Button -->
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+
+                            <div class="navbar-collapse collapse clearfix">
+                                <ul class="navigation clearfix">
+                                    <li><a href="/">Главная</a></li>
+                                    <li><a href="about">О нас</a></li>
+                                    <li><a href="rooms">Номера</a></li>
+                                    <li class="current-menu-item"><a href="articles">Статьи</a></li>
+                                    <li><a href="gallery">Фотогалерея</a></li>
+                                    <li><a href="contact">Контакты</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                        <!-- Main Menu END -->
+                    </div>
+
+                    <div class="menu-btn">
+                        <!-- <a href="contact.html" class="btn theme-btn">Contact Now <i class="icofont-arrow-right"></i></a> -->
+                        <a href="https://www.instagram.com/restaurant_olimp/"><img style="width:30px;height:30px;" src="assets/images/instagram-logo.png" alt="instagram"> </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- END Header Upper -->
+    </header>
+
+    <!-- START Page Banner -->
+    <section class="service-section pt-100 rpt-85 pb-20 rpb-10">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="text-block">
+                        <p style="text-align: center;"><a href="article/1" style="font-size:24px; color: #F6C332">Гостиница в Дагестане для отдыха.</a></p>
+                        Поездка в Дагестан сегодня – это удивительно правильное и интересное решение для граждан России, собравшихся отдохнуть на морском побережье. Надо знать и ценить то богатство, которое предоставляют российские просторы. Дагестанская республика готова принимать гостей – и деловых туристов, и отдыхающих курортников. Деловой туризм здесь развит на хорошем уровне – разработаны маршруты по историческим местам, экскурсоводы готовы рассказывать о республике на разных языках мира...
+                        <hr>
+
+                        <p style="text-align: center;"><a href="article/2" style="font-size:24px; color: #F6C332">Отдых в Махачкале</a></p>
+                        Уникальное и удивительно интересное место в России, где тонко и корректно переплетены множество культур разных народностей – это Махачкала, центр Дагестанской республики. Это тот уголок России, который живёт своими самобытными традициями и обычаями, и приглашает познакомиться с ними всех жителей России...
+                        <hr>
+
+                        <p style="text-align: center;"><a href="article/3" style="font-size:24px; color: #F6C332">Гостиница «Спорт» предлагает уют и комфорт</a></p>
+                        Самая интересная и наполненная комфортом и уютом гостиница в Махачкале – это «Спорт», комплекс, который привлекает гостей столицы Дагестана и удачным расположением в черте города, и отличным сервисом. Рядом с гостиницей – городские аллеи, по которым приятно прогуляться в свободное время, подышать чистым воздухом с морским ветерком...
+                        <hr>
+
+                        <p style="text-align: center;"><a href="article/4" style="font-size:24px; color: #F6C332">Гостиница Махачкалы «Спорт».</a></p>
+                        Современная Махачкала дружелюбно встречает всех гостей города. Местные жители Дагестана поддерживают давние национальные традиции гостеприимства и радушного отношения ко всем гостям. В Махачкале легко решаются вопросы расселения приезжих – и отдыхающих, и туристов, и бизнесменов. Предлагается комфортное жилье для временного проживания и отдыха после делового дня...
+                        <hr>
+
+                        <p style="text-align: center;"><a href="article/5" style="font-size:24px; color: #F6C332">И навсегда останется в сердце наша красавица Махачкала</a></p>
+                        Уникальное и удивительно интересное место в России, где тонко и корректно переплетены множество культур разных народностей – это Махачкала, центр Дагестанской республики. Это тот уголок России, который живёт своими самобытными традициями и обычаями, и приглашает познакомиться с ними всех жителей России...
+
+                        История Дагестана достаточно объёмная и уходящая корнями глубоко в пласты истории. Сегодня большой российский город постепенно превращается в крупный туристический и деловой центр страны, куда съезжаются туристы и бизнесмены со всего мира, и где есть множество лучших в Дагестане гостиниц...
+                        <hr>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END Page Banner -->
+    <!-- Scroll Top Button -->
+    <button class="scroll-top scroll-to-target" data-target="html"><i class="icofont-arrow-up"></i></button>
+</div>
+{% endblock %}

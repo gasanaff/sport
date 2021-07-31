@@ -1,0 +1,106 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Гостиница Махачкалы «Спорт»{% endblock %}
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/icofont.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/spacing.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/leaflet.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/slick.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/menu.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/datepicker.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
+<link rel="icon" type="image/png" href="{{ asset('assets/images/favicon.png')}}"/>
+{% endblock %}
+{% block javascripts %}
+<script src="{{ asset('assets/js/jquery-3.5.1.min.js') }}"></script>
+<script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('assets/js/jquery.magnific-popup.min.js') }}"></script>
+<script src="{{ asset('assets/js/leaflet.min.js') }}"></script>
+<script src="{{ asset('assets/js/slick.min.js') }}"></script>
+<script src="{{ asset('assets/js/datepicker.min.js') }}"></script>
+<script src="{{ asset('assets/js/script.js') }}"></script>
+{% endblock %}
+{% block body %}
+<div class="page-wrapper">
+
+    <!-- Preloader -->
+    <div class="preloader"></div>
+
+    <!-- START Main Header -->
+    <header class="main-header">
+
+        <!-- Header-Upper -->
+        <div class="header-upper">
+            <div class="container clearfix">
+
+                <div class="header-inner d-lg-flex align-items-center">
+
+                    <div class="logo-outer d-flex align-items-center">
+                        <div class="logo"><a href="/"><img style="width:50px;height:50px;" src="{{ asset('assets/images/logo.png')}}" alt="Logo" /></a></div>
+                    </div>
+
+                    <div class="nav-outer clearfix ml-lg-auto mr-lg-auto">
+                        <!-- Main Menu -->
+                        <nav class="main-menu navbar-expand-lg">
+                            <div class="navbar-header clearfix">
+                                <!-- Toggle Button -->
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+
+                            <div class="navbar-collapse collapse clearfix">
+                                <ul class="navigation clearfix">
+                                    <li><a href="/">Главная</a></li>
+                                    <li><a href="/about">О нас</a></li>
+                                    <li><a href="/rooms">Номера</a></li>
+                                    <li class="current-menu-item"><a href="/articles">Статьи</a></li>
+                                    <li><a href="/gallery">Фотогалерея</a></li>
+                                    <li><a href="/contact">Контакты</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                        <!-- Main Menu END -->
+                    </div>
+
+                    <div class="menu-btn">
+                        <!-- <a href="contact.html" class="btn theme-btn">Contact Now <i class="icofont-arrow-right"></i></a> -->
+                        <a href="https://www.instagram.com/restaurant_olimp/"><img style="width:30px;height:30px;" src="{{ asset('assets/images/instagram-logo.png')}}" alt="instagram"> </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- END Header Upper -->
+    </header>
+
+
+    <!-- START Page Banner -->
+    <section class="service-section pt-100 rpt-85 pb-20 rpb-10">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="text-block">
+                        <h5 style="text-align: center;">Гостиница Махачкалы «Спорт»</h5>
+
+                        <p>&nbsp;Современная Махачкала дружелюбно встречает всех гостей города. Местные жители Дагестана поддерживают давние национальные традиции гостеприимства и радушного отношения ко всем гостям. В Махачкале легко решаются вопросы расселения приезжих – и отдыхающих, и туристов, и бизнесменов. Предлагается комфортное жилье для временного проживания и отдыха после делового дня.</p>
+                        <p>Одно из лучших мест для проживания в <b>Махачкале – гостиничный комплекс «Спорт</b>». Это прекрасное место отдыха для любых гостей столицы Дагестана. Здесь гостей встречают комфортабельные номера разного класса комфортности: эконом, экстра, люкс. Персонал гостиницы предоставляет полный комплекс услуг, внимательное и доброжелательное отношение. В комплекс услуг включены трансфер для приезжающих и отъезжающих гостей, организация экскурсий для группы бизнесменов на их свободное время, вызов такси для поездок по городу.</p>
+                        <p><b><i>Приятное пребывание в гостинице «Спорт» <o:p></o:p></i></b></p>
+                        <p>Пребывание в гостиничном комплексе «Спорт» становится приятной частью всего путешествия. Гостиница «Спорт» построена специально для обслуживания приезжающих туристов и спортсменов. Проект здания признан был самым оригинальным и интересным в архитектурном плане, его разработали лучшие архитекторы Дагестана. Современный стиль корпусов выражен простыми и гармоничными линиями, общий вид гостиницы вызывает искреннее восхищение.</p>
+                        <p>Гостиница пользуется высокой популярностью у гостей города, потому что приоритет работы персонала – профессиональный уровень организации приёма и обслуживания, направленной на комфортный отдых гостей. Приезжим здесь предоставляются не только номера отличной комфортности, но ещё и полный комплекс дополнительных услуг для активного и развлекательного отдыха: тренажерный зал, бильярдный зал, теннисные столы в холлах.</p>
+                        <p>Комфортабельные номера оснащены современными удобствами, удовлетворяющими потребности посетителей. Номера включают прихожую, спальню, санузел. Обстановка состоит из современной мебели, обязательно установлены рабочие столы, есть шкафы для размещения личных вещей. Оснащение номеров включает холодильники, телевизоры и кондиционеры, гостиница имеет постоянный выход в интернет.&nbsp;</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END Page Banner -->
+        <!-- Scroll Top Button -->
+        <button class="scroll-top scroll-to-target" data-target="html"><i class="icofont-arrow-up"></i></button>
+    </div>
+    {% endblock %}
